@@ -32,7 +32,7 @@ class AdminController
 
     public function deleteuser($id)
     {
-        require_once "views/admin/dele-members.php"
+        require_once "views/admin/dele-members.php";
     
     }
 

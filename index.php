@@ -59,7 +59,7 @@ get('/admin/del/$id', function($id){
     $controller->deleteuser($id);
 });
 
-get('/admin/categories'), function(){
+get('/admin/categories', function(){
     $controller=newAdminController();
-    $controller=getCategories()
-}
+    $controller=getCategories();
+});
