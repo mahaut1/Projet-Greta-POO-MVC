@@ -36,9 +36,10 @@ class AdminController
     
     }
 
-    public function add_new_user($id)
+    public function addnewuser($id)
     {
-        // récupérer les infos dans le post et créer l'utilisateur
+        $user=$this->userManager->add_new_user();
+        require_once "views/admin/users.php";
     
     }
 
