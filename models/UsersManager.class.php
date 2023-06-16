@@ -10,7 +10,26 @@ class UsersManager extends Model
         $this->users[]=$user;
     }
 
-    public function get_all_members(){
+    public function add_new_user() {
+        $userName = filter_var(htmlentities(ucfirst(strtolower($_POST["username"]))));
+            $email = filter_var($_POST["email"], FILTER_VALIDATE_EMAIL);
+            $password = filter_var(htmlentities($_POST["password"]));
+            $pwdhashed = password_hash($password, PASSWORD_DEFAULT);     
+
+            // See if Email exists
+            $emailExists = $this->checkEmailExists($email);
+            if ($emailExists) {
+            return "L'email existe déjà. Veuillez choisir une autre adresse e-mail.";
+            } else {
+                $sql = "INSERT INTO ".$this->users."(username, email, hash) VALUES(:username, :Email, :password)";
+                
+                $req = $this->getDatabase()->prepare($sql);
+                $req->execute(['username'=> $userName, 'Email'=> $email, 'password'=> $pwdhashed]);
+                $req->closeCursor();
+    }
+}
+
+    public function get_all_members() {
         return $this->users;
     }
 

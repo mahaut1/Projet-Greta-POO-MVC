@@ -60,6 +60,6 @@ get('/admin/del/$id', function($id){
 });
 
 get('/admin/categories', function(){
-    $controller=newAdminController();
+    $controller=new AdminController();
     $controller=getCategories();
 });

@@ -1,6 +1,8 @@
 <?php
-include_once "../view/header-admin.php"
-?>
+
+include_once "views/admin/templates/header-admin.php";
+
+ ?>
 
 <div class="row">
             <div class="col-lg-12">
