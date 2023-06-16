@@ -27,7 +27,7 @@ define("FULL_URL", str_replace("index.php", "", (isset($_SERVER['HTTPS']) ? "htt
 require_once "helpers/string_helper.php";
 
 /******** CONTROLLERS *********/
-// inclusion des controllers (ici je n'utilise qu'un seul controler pour les 4 routes)
+// inclusion des controllers 
 require_once "controllers/AdminController.php";
 
 
@@ -63,3 +63,31 @@ get('/admin/categories', function(){
     $controller=new AdminController();
     $controller=getCategories();
 });
+
+$p= $_GET['p'] ?? "";
+include_once 'views/frontoffice/templates/header.php';
+
+switch($p){
+    case "Accueil";
+        include('../views/frontoffice/home.php');
+        break;
+
+    case "S'inscrire";
+        include('../views/frontoffice/signup.php');
+        break;
+    
+    case "Se connecter";
+        include('../views/frontoffice/login.php');
+        break;
+    
+    case "Membres";
+        include('../views/frontoffice/espace-membre.php');
+        break;
+    
+    case "Annonces";
+        include('../views/frontoffice/products.php');
+        break;
+
+   
+    
+}

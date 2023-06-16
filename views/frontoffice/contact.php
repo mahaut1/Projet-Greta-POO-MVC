@@ -1,7 +1,6 @@
 <?php
-include_once "../view/header.php";
+include_once "../views/frontoffice/templates/header.php";
 ?>
-
 <div class="Contact" action="">
 <form method="POST">
   

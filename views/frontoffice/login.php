@@ -1,5 +1,5 @@
 <?php
-include_once "../view/header.php";
+include_once "../views/frontoffice/templates/header.php";
 ?>
   
   <main>
@@ -12,11 +12,11 @@ include_once "../view/header.php";
       </div>
       <div class="form-group">
       <label for="e-mail" class="form-label">Votre email</label>
-			<input type="email" class="form-control" name="email" placeholder="Email" required="">
+			<input type="email" class="form-control" name="email" placeholder="Email"value="<?php if(!empty($_POST["email"])) echo htmlentities($_POST["email"]) ?>" required=""> required="">
       </div>
       <div  class="form-group">
       <label for="pwd" class="form-label">Mot de passe</label>
-			<input type="password" class="form-control" name="pwd" placeholder="Mot de passe" required="">
+			<input type="password" class="form-control" name="pwd" placeholder="Mot de passe" value="<?php if(!empty($_POST["password"])) echo htmlentities($_POST["password"]) ?>" required=""> required="">
       </div>
       <button type="submit" class="btn btn-primary">Valider</button>
 			<a href="?p=forgot">Mot de passe oublié ?</a>
