@@ -1,6 +1,4 @@
-<?php
-include_once "../views/frontoffice/templates/header.php";
-?>
+
 
 <div class="Creation_Annonce" action="">
 <form method="POST">

@@ -36,10 +36,10 @@ class AdminController
     
     }
 
-    public function addnewuser($id)
+    public function add_new_user($id)
     {
         $user=$this->userManager->add_new_user();
-        require_once "views/admin/users.php";
+        require_once "views/admin/user-add.php";
     
     }
 

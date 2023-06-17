@@ -1,6 +1,4 @@
-<?php
-include_once "../views/frontoffice/templates/header.php";
-?>
+
 
     <div class="card-group">
       <div class="card">

@@ -24,14 +24,16 @@ class UsersManager extends Model
         return false;
     }
 
+    
+
     public function add_new_user() {
-        $userName = filter_var(htmlentities(ucfirst(strtolower($_POST["username"]))));
+        $username = filter_var(htmlentities(ucfirst(strtolower($_POST["username"]))));
             $email = filter_var($_POST["email"], FILTER_VALIDATE_EMAIL);
             $password = filter_var(htmlentities($_POST["password"]));
             $pwdhashed = password_hash($password, PASSWORD_DEFAULT);     
 
             // See if Email exists
-            $emailExists = $this->checkEmailExists($email);
+            $emailExists = $this->getUserByEmail($email);
             if ($emailExists) {
             return "L'email existe déjà. Veuillez choisir une autre adresse e-mail.";
             } else {
@@ -43,11 +45,11 @@ class UsersManager extends Model
     }
 }
 public function signUp(){
-    $userName = filter_var(htmlentities(ucfirst(strtolower($_POST["username"]))));
+    $username = filter_var(htmlentities(ucfirst(strtolower($_POST["username"]))));
     $email = filter_var($_POST["email"], FILTER_VALIDATE_EMAIL);
     $password = filter_var(htmlentities($_POST["password"]));
     $pwdhashed = password_hash($password, PASSWORD_DEFAULT);
-    $nom = filter_var(htmlentities(ucfirst(strtolower($_POST["fname"]))));
+    $nom = filter_var(htmlentities(ucfirst(strtolower($_POST["nom"]))));
     $prenom = filter_var(htmlentities(ucfirst(strtolower($_POST["prenom"]))));
     $dateNaissance = filter_var(htmlentities($_POST["dateNaissance"])); 
     $numTel = htmlentities($_POST["numTel"]);

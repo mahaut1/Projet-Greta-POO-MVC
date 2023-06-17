@@ -1,6 +1,4 @@
-<?php
-include_once "../views/frontoffice/templates/header.php";
-?>
+
   
   <main>
 	<div class="login">

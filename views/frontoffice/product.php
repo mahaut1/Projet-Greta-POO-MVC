@@ -1,6 +1,4 @@
-<?php
-include_once "../views/frontoffice/templates/header.php";
-?>
+
 
 <div class="album py-5 bg-light">
     <div class="container">
@@ -12,10 +10,10 @@ include_once "../views/frontoffice/templates/header.php";
             </div>
 
             <div class="col-lg-8">
-                <h1><?= $annonce['name']; ?> <a href="/index.php/panier/add?id=<?= $annonce['id']; ?>" class="btn btn-primary m-3 text-white">Ajouter au panier</a></h1>
+                <h1><?= $annonce['nom']; ?> <a href="/index.php/panier/add?id=<?= $annonce['id']; ?>" class="btn btn-primary m-3 text-white">Ajouter au panier</a></h1>
 
                 <p>
-                    Prix : <?= $annonce['price']; ?>€
+                    Prix : <?= $annonce['prix']; ?>€
                 </p>
                 <p>
                     <?= $annonce['description']; ?>

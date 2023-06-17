@@ -1,6 +1,4 @@
-<?php
-include_once "../views/frontoffice/templates/header.php";
-?>
+
 <div class="album py-5 bg-light">
     <div class="container">
 
