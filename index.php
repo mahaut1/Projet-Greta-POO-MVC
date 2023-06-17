@@ -69,23 +69,23 @@ include_once 'views/frontoffice/templates/header.php';
 
 switch($p){
     case "Accueil";
-        include('../views/frontoffice/home.php');
+        include('views/frontoffice/home.php');
         break;
 
     case "S'inscrire";
-        include('../views/frontoffice/signup.php');
+        include('views/frontoffice/signup.php');
         break;
     
     case "Se connecter";
-        include('../views/frontoffice/login.php');
+        include('views/frontoffice/login.php');
         break;
     
     case "Membres";
-        include('../views/frontoffice/espace-membre.php');
+        include('views/frontoffice/espace-membre.php');
         break;
     
     case "Annonces";
-        include('../views/frontoffice/products.php');
+        include('views/frontoffice/products.php');
         break;
 
    
