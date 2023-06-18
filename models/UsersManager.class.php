@@ -114,7 +114,7 @@ public function signUp(){
         }
     }
 
-    public function get_all_categories(){
+    public function getCategories(){
         $results=array();
         if (DB_MANAGER == PDO) {
             $req=$this->getDataBase()->prepare("SELECT * from categories");

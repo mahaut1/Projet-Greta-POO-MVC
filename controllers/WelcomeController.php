@@ -47,4 +47,17 @@ class WelcomeController
     require_once "views/frontoffice/products.php";
     require_once "views/frontoffice/templates/footer.php";
    }
+
+   public function categories()
+   {
+      require_once "views/frontoffice/templates/header.php";
+      require_once "views/frontoffice/categories.php";
+      require_once "views/frontoffice/templates/footer.php";
+   }
+
+   public function contact()
+   {
+      require_once "views/frontoffice/templates/header.php";
+      require_once "views/frontoffice/contact.php";
+   }
 }

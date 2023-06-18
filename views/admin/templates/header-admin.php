@@ -21,16 +21,16 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-            <a class="nav-link" href="./views/admin/admin.php">Administrateurs</a>
+            <a class="nav-link" href="<?= URL ?>admin">Administrateurs</a>
           </li>
         <li class="nav-item">
-            <a class="nav-link" href="./views/admin/users.php">Utilisateurs</a>
+            <a class="nav-link" href="<?= URL ?>users">Utilisateurs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./views/admin/products.php">Annonces</a>
+            <a class="nav-link" href="<?= URL ?>products">Annonces</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./views/admin/categories.php">Catégories</a>
+            <a class="nav-link" href="<?= URL ?>categories">Catégories</a>
           </li>
 
         

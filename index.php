@@ -64,8 +64,6 @@ get('/admin/categories', function(){
     $controller->getCategories();
 });
 
-// regarde comment j'ai traité tes routes 
-// regarde dans le controllercomment on traite chaque route. C'est simple !
 get('/', function(){
     $controller=new WelcomeController();
     $controller->home();
@@ -95,5 +93,13 @@ get('/products', function(){
     $controller=new WelcomeController();
     $controller->products();
 });
-
-
+get('/categories',function(){
+    $controller=new WelcomeController();
+    $controller->categories();
+}
+);
+get('/contact', function(){
+    $controller=new WelcomeController();
+    $controller=contact();
+}
+);

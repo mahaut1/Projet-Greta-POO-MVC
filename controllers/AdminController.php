@@ -43,4 +43,11 @@ class AdminController
     
     }
 
+    public function categories()
+    {
+        $categories=$this->userManager->getCategories();
+        require_once "views/admin/categories.php";
+    }
+        
+
 }

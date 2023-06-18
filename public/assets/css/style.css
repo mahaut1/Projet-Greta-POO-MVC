@@ -1,0 +1,5 @@
+/* Tes règles CSS "perso"*/
+.card img {
+    max-height: 250px;
+    object-fit: cover;
+}
