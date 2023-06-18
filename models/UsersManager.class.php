@@ -40,7 +40,7 @@ class UsersManager extends Model
                 $sql = "INSERT INTO ".$this->users."(username, email, hash) VALUES(:username, :email, :password)";
                 
                 $req = $this->getDatabase()->prepare($sql);
-                $req->execute(['username'=> $userName, 'Email'=> $email, 'password'=> $pwdhashed]);
+                $req->execute(['username'=> $username, 'email'=> $email, 'password'=> $pwdhashed]);
                 $req->closeCursor();
     }
 }
