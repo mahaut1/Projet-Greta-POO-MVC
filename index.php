@@ -29,7 +29,7 @@ require_once "helpers/string_helper.php";
 /******** CONTROLLERS *********/
 // inclusion des controllers 
 require_once "controllers/AdminController.php";
-
+require_once "controllers/WelcomeController.php";
 
 /****** ROUTING *********/
 // Réalisation du système de routage
@@ -61,33 +61,39 @@ get('/admin/del/$id', function($id){
 
 get('/admin/categories', function(){
     $controller=new AdminController();
-    $controller=getCategories();
+    $controller->getCategories();
 });
 
-$p= $_GET['p'] ?? "";
-include_once 'views/frontoffice/templates/header.php';
+// regarde comment j'ai traité tes routes 
+// regarde dans le controllercomment on traite chaque route. C'est simple !
+get('/', function(){
+    $controller=new WelcomeController();
+    $controller->home();
+});
 
-switch($p){
-    case "Accueil";
-        include('views/frontoffice/home.php');
-        break;
+get('/login', function(){
+    $controller=new WelcomeController();
+    $controller->login();
+});
 
-    case "S'inscrire";
-        include('views/frontoffice/signup.php');
-        break;
-    
-    case "Se connecter";
-        include('views/frontoffice/login.php');
-        break;
-    
-    case "Membres";
-        include('views/frontoffice/espace-membre.php');
-        break;
-    
-    case "Annonces";
-        include('views/frontoffice/products.php');
-        break;
+get('/signup', function(){
+    $controller=new WelcomeController();
+    $controller->signup();
+});
 
-   
-    
-}
+get('/membres', function(){
+    $controller=new WelcomeController();
+    $controller->membres();
+});
+
+get('/new-annonce', function(){
+    $controller=new WelcomeController();
+    $controller->new_annonce();
+});
+
+get('/products', function(){
+    $controller=new WelcomeController();
+    $controller->products();
+});
+
+

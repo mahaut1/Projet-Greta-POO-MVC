@@ -1,6 +1,6 @@
 <?php
 
-include_once "views/admin/templates/header-admin.php";
+require_once "views/admin/templates/header-admin.php";
 
  ?>
 
@@ -10,8 +10,7 @@ include_once "views/admin/templates/header-admin.php";
         <div class="row">
             <div class="col-lg-12">
                 <h1>Catégories</h1>
-                <a class="btn btn-primary text-white" href="http://localhost/ProjetGreta/admin/categorie-add.php">Ajouter</a>
-                <a class="btn btn-primary text-white" href="http://localhost/ProjetGreta/admin/import.php">Import</a>
+                <a class="btn btn-primary text-white" href="./admin/categorie-add">Ajouter</a>
                 <table class="table">
                     <thead>
                     <tr>
@@ -26,7 +25,7 @@ include_once "views/admin/templates/header-admin.php";
                             <th scope="row"><?= $c['id'] ?></th>
                             <td><?= $c['name'] ?></td>
                             <td>
-                                <a href="/index.php/admin/category/del?id=<?= $c['id'] ?>" class="btn btn-danger text-white">Supprimer</a>
+                                <a href="/index.php/admin/categories/del?id=<?= $c['id'] ?>" class="btn btn-danger text-white">Supprimer</a>
                             </td>
                         </tr>
                     <?php } ?>
