@@ -18,7 +18,7 @@ class AdminController
    
     public function usersdashboard()
     {
-        $membres = $this->userManager->get_all_members() ;
+        $membres = $this->userManager->get_all_users() ;
         require_once "views/admin/admin.php" ;
     
     }
@@ -36,7 +36,7 @@ class AdminController
     
     }
 
-    public function add_new_user($id)
+    public function add_new_user()
     {
         $user=$this->userManager->add_new_user();
         require_once "views/admin/user-add.php";
@@ -46,8 +46,15 @@ class AdminController
     public function categories()
     {
         $categories=$this->userManager->getCategories();
-        require_once "views/admin/categories.php";
+        require_once "views/admin/categoriesadmin.php";
     }
-        
+    
+    public function annonces()
+    {
+        $annonces=$this->annoncesManager->get_all_annonces();
+        require_once "views/admin/productsadmin.php";
+    }
+
+    
 
 }

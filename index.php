@@ -30,6 +30,7 @@ require_once "helpers/string_helper.php";
 // inclusion des controllers 
 require_once "controllers/AdminController.php";
 require_once "controllers/WelcomeController.php";
+require_once "controllers/AnnonceController.php";
 
 /****** ROUTING *********/
 // Réalisation du système de routage
@@ -42,6 +43,23 @@ get('/admin', function(){
     $controller->usersdashboard();
 });
 
+get('/admin/products', function(){
+    $controller=new AnnonceController();
+    $controller-> annoncesdashboard();
+}
+);
+
+get('/admin/product-add', function(){
+    $controller=new AnnonceController();
+    $controller-> add_new_annonce();
+}
+);
+
+post('/admin/categorie-add', function(){
+    $controller=new AdminController();
+    $controller=add_categorie();
+}
+);
 
 get('/admin/user-add', function(){
     $controller = new AdminController();
@@ -61,7 +79,7 @@ get('/admin/del/$id', function($id){
 
 get('/admin/categories', function(){
     $controller=new AdminController();
-    $controller->getCategories();
+    $controller->categories();
 });
 
 get('/', function(){
@@ -105,6 +123,7 @@ get('/contact', function(){
 );
 get('/annonce', function(){
     $controller= new AnnonceController;
+
 }
 
 );

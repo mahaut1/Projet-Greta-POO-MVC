@@ -32,10 +32,26 @@ class AnnoncesManager extends Model
             $req->execute();
             $categories=$req->fetchall(PDO::FETCH_ASSOC);
             $req->closeCursor();
-            return $categories;   
+            
         }
     }
 
-    
+    public function add_new_annonce() {
+            $titre = filter_var(htmlentities($_POST["titre"]));
+            $description= filter_var(htmlentities($_POST["description"]));
+            $prix_vente = filter_var(htmlentities($_POST["prix_vente"]));
+           
+            // on regarde si l'annonce existe
+            $emailExists = $this->getAnnonceById($id_annonce);
+            if ($emailExists) {
+            return "Cette annonce existe déja. Veuillez saisir une autre annonce.";
+            } else {
+                $sql = "INSERT INTO ".$this->annonces."(titre, description, prix_vente) VALUES(:titre, :description, :prix_vente)";
+                
+                $req = $this->getDatabase()->prepare($sql);
+                $req->execute(['titre'=> $titre, 'description'=> $description, 'prix_vente'=> $prix_vente]);
+                $req->closeCursor();
+    }
 
+}
 }

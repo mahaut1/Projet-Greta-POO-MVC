@@ -21,9 +21,18 @@ require_once "views/admin/templates/header-admin.php";
                     <tbody>
                     <?php foreach ($annonces as $a) { ?>
                         <tr>
-                            <th scope="row"><?= $a['id'] ?></th>
+                            <th scope="row"><?= $a['id_annonce'] ?></th>
+                            <td><?= $a['date_creation'] ?></td>
                             <td><?= $a['titre'] ?></td>
                             <td><?= $a['description'] ?></td>
+                            <td><?= $a['duree_de_publication'] ?></td>
+                            <td><?= $a['prix_vente'] ?></td>
+                            <td><?= $a['cout_annonce'] ?></td>
+                            <td><?= $a['date_validation'] ?></td>
+                            <td><?= $a['id_etat'] ?></td>
+                            <td><?= $a['id_utilisateur'] ?></td>
+                            <td><?= $a['date_vente'] ?></td>
+                            <td><?= $a['id_acheteur'] ?></td>
                             <td>
                                 <a href="/index.php/admin/product/del?id=<?= $p['id'] ?>" class="btn btn-danger text-white">Supprimer</a>
                             </td>

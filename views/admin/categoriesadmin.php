@@ -22,10 +22,10 @@ require_once "views/admin/templates/header-admin.php";
                     <tbody>
                     <?php foreach ($categories as $c) { ?>
                         <tr>
-                            <th scope="row"><?= $c['id'] ?></th>
-                            <td><?= $c['name'] ?></td>
+                            <th scope="row"><?= $c['id_categorie'] ?></th>
+                            <td><?= $c['nom_categorie'] ?></td>
                             <td>
-                                <a href="/index.php/admin/categories/del?id=<?= $c['id'] ?>" class="btn btn-danger text-white">Supprimer</a>
+                                <a href="/index.php/admin/categories/del?id=<?= $c['id_categorie'] ?>" class="btn btn-danger text-white">Supprimer</a>
                             </td>
                         </tr>
                     <?php } ?>

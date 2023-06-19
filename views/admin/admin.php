@@ -18,10 +18,10 @@ include_once "./views/admin/templates/header-admin.php";
                     </tr>
                     </thead>
                     <tbody>
-                    <?php foreach ($users as $user) { ?>
+                    <?php foreach ($membres as $m) { ?>
                         <tr>
-                            <th scope="row"><?= $user['id'] ?></th>
-                            <td><?= $user['email'] ?></td>
+                            <th scope="row"><?= $m['id_membre'] ?></th>
+                            <td><?= $m['email'] ?></td>
                             <td>
                                 <a class="btn btn-danger text-white" href="./admin/del/<?= $u['id'] ?>">Supprimer</a>
                             </td>

@@ -5,7 +5,7 @@ class Annonce extends Model
     private $description;
     private $prixVente;
 
-    public function_construct($titre,$description,$prixVente)
+    public function __construct($titre,$description,$prixVente)
     {
         $this->titre=$titre;
         $this->description=$description;
