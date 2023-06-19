@@ -11,8 +11,8 @@ require_once __DIR__.'/librairies/phprouter/router.php';
 /***** SETTINGS/CONSTANTES *****/
 define("ROOT_DIR", "mvc-mahaut") ; // répertoire racine TODO à définir selon le nom de votre projet (dossier qui suit "localhost")
 // On définit les différents modes d'accès aux données
-define("PDO", 0) ; // connexion par PDO
-define("MEDOO", 1) ; // Connexion par Medoo
+define("PDO", 1) ; // connexion par PDO
+define("MEDOO", 0) ; // Connexion par Medoo
 // Choix du mode de connexion
 define("DB_MANAGER", PDO); // TODO choisissez entre PDO ou MEDOO
 // Création de deux constantes URL et FULL_URL qui pourront servir dans les controlleurs et/ou vues
@@ -100,6 +100,11 @@ get('/categories',function(){
 );
 get('/contact', function(){
     $controller=new WelcomeController();
-    $controller=contact();
+    $controller->contact();
 }
+);
+get('/annonce', function(){
+    $controller= new AnnonceController;
+}
+
 );

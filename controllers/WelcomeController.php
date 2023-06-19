@@ -59,5 +59,6 @@ class WelcomeController
    {
       require_once "views/frontoffice/templates/header.php";
       require_once "views/frontoffice/contact.php";
+      require_once "views/frontoffice/templates/footer.php";
    }
 }
