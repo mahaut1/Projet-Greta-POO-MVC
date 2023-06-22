@@ -28,6 +28,10 @@
       <input type="password" class="form-control" name="password" placeholder="Mot de passe" value="<?php if(!empty($_POST["password"])) echo htmlentities($_POST["password"]) ?>" required="" pattern="^(?=.*\d)(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,}$" title="Le mot de passe doit comporter au moins 8 caractères dont au moins 1 chiffre, 1 minuscule, 1 majuscule et 1 caractères spécial">
     </div>
     <div class="mb-3">
+    <label for="password2" class="form-label">Confirmez votre mot de passe</label>
+      <input type="password" class="form-control" name="password2" placeholder="Mot de passe" value="<?php if(!empty($_POST["password"])) echo htmlentities($_POST["password"]) ?>" required="" pattern="^(?=.*\d)(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,}$" title="Le mot de passe doit comporter au moins 8 caractères dont au moins 1 chiffre, 1 minuscule, 1 majuscule et 1 caractères spécial">
+    </div>
+    <div class="mb-3">
     <label for="adressePostale" class="form-label">Votre adresse postale</label>
       <input type="text" class="form-control" name="adressePostale" placeholder="adresse postale" value="<?php if(!empty($_POST["adressePostale"])) echo htmlentities($_POST["adressePostale"]) ?>" required="">
     </div>

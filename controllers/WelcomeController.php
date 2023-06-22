@@ -50,6 +50,7 @@ class WelcomeController
 
    public function categories()
    {
+      //$categories_manager= new CategoriesManager();
       require_once "views/frontoffice/templates/header.php";
       require_once "views/frontoffice/categories.php";
       require_once "views/frontoffice/templates/footer.php";

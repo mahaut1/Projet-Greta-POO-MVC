@@ -7,13 +7,13 @@ class User extends Model implements \JsonSerializable // le implements sert pour
     private $password; 
     private $nom;
     private $prenom;
-    private $dateNaissance;
-    private $adressePostale;
-    private $numTel;
+    private $date_naissance;
+    private $adresse_postale;
+    private $num_telephone;
     private $ville;
     private $codePostale;
 
-    public function __construct($id, $username, $email, $password, $nom, $prenom, $dateNaissance, $adressePostale, $numTel, $ville, $codePostale)
+    public function __construct($id, $username, $email, $password, $nom, $prenom, $date_naissance, $adresse_postale, $num_telephone, $ville, $code_postal)
     {
         $this->id = $id ;
         $this->username = $username ;
@@ -94,27 +94,27 @@ class User extends Model implements \JsonSerializable // le implements sert pour
     }
     public function getDateNaissance()
     {
-        return $this->dateNaissance;
+        return $this->date_naissance;
     }
-    public function setDateNaissance($dateNaissance) : void
+    public function setDateNaissance($date_naissance) : void
     {
-        $this->dateNaissance=$dateNaissance;
+        $this->dateNaissance=$date_naissance;
     }
     public function getAdressePostale()
     {
-        return $this->adressePostale;
+        return $this->adresse_postale;
     }
-    public function setAdressePostale($adressePostale) : void
+    public function setAdressePostale($adresse_postale) : void
     {
-        $this->adressePostale=$adressePostale;
+        $this->adresse_postale=$adresse_postale;
     }
-    public function getNumTel()
+    public function getNumTelephone()
     {
-        return $this->numTel;
+        return $this->num_telephone;
     }
-    public function setNumTel($numTel) :void
+    public function setNumTelephone($num_telephone) :void
     {
-        $this->numTel=$numTel;
+        $this->num_telephone=$num_telephone;
     }
     public function getVille()
     {
@@ -126,11 +126,11 @@ class User extends Model implements \JsonSerializable // le implements sert pour
     }
     public function getCodePostal()
     {
-        return $this->codePostale;
+        return $this->code_postale;
     }
     public function setCodePostal()
     {
-        $this->codePostal=$codePostal;
+        $this->code_postal=$codePostal;
     }
 
 }
