@@ -14,4 +14,9 @@ class CategorieController
         $categories=$this->categorieManager->getCategories();
         require_once "views/admin/categoriesadmin.php";
     }
+
+    public function addCategorie()
+    {
+        $newcategorie=$this->categorieManager->
+    }
 }

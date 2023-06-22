@@ -32,4 +32,9 @@ class AnnonceController
         $annonce=$this->annonceManager->add_new_annonce();
         require_once "views/admin/annonce-add.php";
     }
+
+    public function deleteAnnonce()
+    {
+        
+    }
 }

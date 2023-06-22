@@ -1,5 +1,6 @@
 <?php
 
+require_once "models/Model.class.php";
 require_once "models/UsersManager.class.php";
 
 
@@ -18,7 +19,7 @@ class AdminController
    
     public function usersdashboard()
     {
-        $membres = $this->userManager->get_all_users() ;
+        $users = $this->userManager->get_all_users() ;
         require_once "views/admin/admin.php" ;
     
     }
@@ -38,7 +39,7 @@ class AdminController
 
     public function add_new_user()
     {
-        $user=$this->userManager->add_new_user();
+        $user=$this->userManager->add_new_user($user);
         require_once "views/admin/user-add.php";
     
     }
