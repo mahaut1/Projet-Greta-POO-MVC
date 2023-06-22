@@ -16,7 +16,7 @@ class AnnonceController
     //affiche toute les annonces
     public function annoncesdashboard()
     {
-        $annonces=$this->annonceManager->get_all_annonces();
+        $annonces=$this->annonceManager->getAllAnnonces();
         require_once "views/admin/products.php";
     }
 
@@ -35,6 +35,6 @@ class AnnonceController
 
     public function deleteAnnonce()
     {
-        
+
     }
 }

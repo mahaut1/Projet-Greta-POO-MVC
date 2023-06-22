@@ -99,9 +99,10 @@ class CategorieManager extends Model
            
     
     public function newCategorie($categorie)
-    $type=null;
-    $message=null;
+  
     {
+        $type=null;
+        $message=null;
         try {
             $req=$this->getDatabase()->prepare('INSERT INTO categories (nom_categorie, description) VALUES (:nom_categorie, :description');
             $req->execute([

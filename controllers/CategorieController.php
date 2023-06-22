@@ -17,6 +17,6 @@ class CategorieController
 
     public function addCategorie()
     {
-        $newcategorie=$this->categorieManager->
+        $newcategorie=$this->categorieManager->newCategorie($categorie);
     }
 }

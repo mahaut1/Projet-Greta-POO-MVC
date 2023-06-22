@@ -63,9 +63,9 @@ get('/admin/product-add', function(){
 
 post('/admin/product-addd' , function(){
     $controller=new AnnonceController();
-    $controller->newAnnonce($annonce)
+    $controller->newAnnonce($annonce);
 }
-)
+);
 
 post('/admin/categorie-add', function(){
     $controller=new AdminController();
