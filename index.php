@@ -55,21 +55,27 @@ get('/admin/categories', function(){
     $controller->categories();
 });
 
-get('/admin/product-add', function(){
+/*  get('/admin/product-add', function(){
     $controller=new AnnonceController();
-    $controller-> loadAllAnnonces();
+    $controller-> annoncesdashboard();
+}
+);  */
+
+get('/admin/product-add' , function(){
+    $controller=new AnnonceController();
+    $controller->annonceAdd();
 }
 );
 
-post('/admin/product-addd' , function(){
-    $controller=new AnnonceController();
-    $controller->newAnnonce($annonce);
+get('/admin/categorie-add', function(){
+    $controller= new AdminController();
+    $controller->categorieAdd();
 }
 );
 
 post('/admin/categorie-add', function(){
     $controller=new AdminController();
-    $controller=add_categorie();
+    $controller->addNewCategorie();
 }
 );
 
@@ -84,7 +90,7 @@ post('/admin/user-add', function(){
 });
 
 
-get('/admin/del/$id_membre', function($id){
+get('/admin/del/$id_membre', function($id_membre){
     $controller = new AdminController();
     $controller->deleteuser($id);
 });

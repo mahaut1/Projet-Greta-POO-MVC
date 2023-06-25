@@ -18,6 +18,7 @@ class AnnoncesManager extends Model
 
     public function getAnnonces()
     { 
+        $result=array();
         if (DB_MANAGER == PDO) {
             $req=$this->getDataBase()->prepare("SELECT * from annonces LIMIT 10");
             $req->execute();
@@ -29,6 +30,7 @@ class AnnoncesManager extends Model
 
     private function getAnnonceById($id_annonce)
     {
+        $result=array();
        try {
            $sql = "SELECT * FROM $this->annonces WHERE id_annonce= :id_annonce";
            $req = $this->getDatabase()->prepare($sql);

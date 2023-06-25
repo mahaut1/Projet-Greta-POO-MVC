@@ -16,7 +16,7 @@ class AnnonceController
     //affiche toute les annonces
     public function annoncesdashboard()
     {
-        $annonces=$this->annonceManager->getAllAnnonces();
+        $annonces=$this->annonceManager->getAnnonces();
         require_once "views/admin/products.php";
     }
 
@@ -29,7 +29,7 @@ class AnnonceController
     //rajouter 
     public function add_new_annonce()
     {
-        $annonce=$this->annonceManager->add_new_annonce();
+        $annonce=$this->annonceManager->NewAnnonce();
         require_once "views/admin/annonce-add.php";
     }
 

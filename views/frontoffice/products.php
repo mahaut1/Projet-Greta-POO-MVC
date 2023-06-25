@@ -11,9 +11,9 @@
                             <p class="card-text"><?= $a['titre']; ?></p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <a href="/index.php/product?id=<?= $p['id_annonce']; ?>" class="btn btn-sm btn-outline-secondary">Voir</a>
+                                    <a href="/index.php/product?id=<?= $a['id_annonce']; ?>" class="btn btn-sm btn-outline-secondary">Voir</a>
                                 </div>
-                                <small class="text-muted"><?= $p['price']; ?>€</small>
+                                <small class="text-muted"><?= $a['price']; ?>€</small>
                             </div>
                         </div>
                     </div>

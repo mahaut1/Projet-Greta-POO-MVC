@@ -7,8 +7,8 @@ include_once "views/admin/templates/header-admin.php";
 <div class="row">
             <div class="col-lg-12">
                 <h1>Utilisateurs</h1>
-                <a href="http://localhost/ProjetGreta/admin/user-add.php" class="btn btn-primary text-white">Ajouter</a>
-                <a href="http://localhost/ProjetGreta/admin/import.php" class="btn btn-primary text-white">Import</a>
+                <a href="http://localhost/mvc-mahaut/views/admin/user-add.php" class="btn btn-primary text-white">Ajouter</a>
+                <a href="http://localhost/mvc-mahaut/views/admin/import.php" class="btn btn-primary text-white">Import</a>
                 <table class="table">
                     <thead>
                     <tr>

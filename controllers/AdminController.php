@@ -2,6 +2,7 @@
 
 require_once "models/Model.class.php";
 require_once "models/UsersManager.class.php";
+require_once "models/CategoriesManager.class.php";
 
 
 class AdminController
@@ -49,13 +50,26 @@ class AdminController
         $categories=$this->userManager->getCategories();
         require_once "views/admin/categoriesadmin.php";
     }
+
+    public function categorieAdd()
+    {
+        require_once "views/admin/categorie-add.php";
+    }
+
+  
     
     public function annonces()
     {
-        $annonces=$this->annoncesManager->get_all_annonces();
+        $annonces=$this->annoncesManager->getAnnonces();
         require_once "views/admin/productsadmin.php";
     }
 
+    public function addNewCategorie()
+    {
+        $new_categorie=$this->userManager->addCategorie();
+        require_once "views/admin/categorie-add.php";
+    }
+}
     
 
-}
+

@@ -11,7 +11,7 @@ include_once "views/admin/templates/header-admin.php";
         <div class="row">
             <h1>Ajouter un utilisateur</h1>
             <div class="col-lg-12">
-                <form method="POST" name="user" action="./user-add">
+                <form method="POST" name="user" action="./admin/user-add">
                 <div class="form-group">
                         <label for="email">Username</label>
                         <input type="text" class="form-control" name="username" placeholder="username">

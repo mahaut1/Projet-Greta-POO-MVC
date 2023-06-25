@@ -268,6 +268,39 @@ class UsersManager extends Model
         }
     }
 
+    public function newCategorie($categorie)
+  
+    {
+        $type=null;
+        $message=null;
+        try {
+            $req=$this->getDatabase()->prepare('INSERT INTO categories (nom_categorie, description) VALUES (:nom_categorie, :description');
+            $req->execute([
+                'nom_categorie'=>$categorie->getNomCategorie(),
+                'description'=>$categorie->getDescription()
+            ]);
+            if ($req->rowCount()) {
+                // Une ligne a été mise à jour => message de succès
+                $type = 'success';
+                $message = 'Catégorie ajoutée';
+            } else {
+                // Aucune ligne n'a été mise à jour => message d'erreur
+                $type = 'error';
+                $message = 'Catégorie non ajoutée';
+            }
+        } catch (Exception $e) {
+            // Une exception a été lancée, récupération du message de l'exception
+            $type = 'error';
+            $message = 'Catégorie non ajoutée: ' . $e->getMessage();
+        }
+        }
+
+    public function addCategorie()
+    {
+        $this->categories[]=$categorie;
+    }
+    
+
 
     public function signUp(){
         $email = filter_var(filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL), FILTER_VALIDATE_EMAIL);

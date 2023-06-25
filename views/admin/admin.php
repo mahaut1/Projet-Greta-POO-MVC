@@ -7,7 +7,7 @@ include_once "./views/admin/templates/header-admin.php";
 
         <div class="row">
             <div class="col-lg-12">
-                <h1>Administrateurs</h1>
+                <h1>Membres</h1>
                 <a href="./admin/user-add" class="btn btn-primary text-white">Ajouter</a>
                 <table class="table">
                     <thead>
@@ -18,10 +18,10 @@ include_once "./views/admin/templates/header-admin.php";
                     </tr>
                     </thead>
                     <tbody>
-                    <?php foreach ($membres as $m) { ?>
+                    <?php foreach ($users as $user) { ?>
                         <tr>
-                            <th scope="row"><?= $m['id_membre'] ?></th>
-                            <td><?= $m['email'] ?></td>
+                            <th scope="row"><?= $user['id_membre'] ?></th>
+                            <td><?= $user['email'] ?></td>
                             <td>
                                 <a class="btn btn-danger text-white" href="./admin/del/<?= $u['id'] ?>">Supprimer</a>
                             </td>

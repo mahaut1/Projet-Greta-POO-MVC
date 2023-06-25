@@ -15,8 +15,14 @@ class CategorieController
         require_once "views/admin/categoriesadmin.php";
     }
 
-    public function addCategorie()
+    public function addNewCategorie()
     {
-        $newcategorie=$this->categorieManager->newCategorie($categorie);
+        $new_categorie=$this->categorieManager->addCategorie($nom_categorie);
+        require_once "views/admin/categorie-add.php";
+    }
+
+    public function categorieAdd()
+    {
+        require_once "views/admin/categorie-add.php";
     }
 }

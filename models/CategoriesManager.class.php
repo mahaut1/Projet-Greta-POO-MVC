@@ -6,7 +6,7 @@ class CategorieManager extends Model
 {
     private $categories;
 
-    public function addCategorie($nomCategorie)
+    public function addCategorie($nom_categorie)
     {
         $this->categories[]=$categorie;
     }
